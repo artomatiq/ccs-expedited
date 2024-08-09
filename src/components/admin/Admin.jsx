@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Header from './header/Header';
+import Header from '../header/Header';
 import Sidebar from './sidebar/Sidebar'
 
 import Dashboard from './dashboard/Dashboard';
@@ -26,13 +26,13 @@ function Admin() {
     }
 
     return (
-        <div className='app-contaienr'>
-            <Header/>
+        <>
             <Sidebar/>
             <div className="main-container">
+                <Header/>
                 {selectedComponent()}
             </div>
-        </div>
+        </>
     );
 }
 

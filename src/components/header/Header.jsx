@@ -1,8 +1,10 @@
+import './Header.css'
+
 function Header() {
     return (
-        <div className="header">
-            <div className="profile">Admin</div>
+        <div className="header-container">
             <div className="menu-button">Menu</div>
+            <div className="profile">Admin</div>
         </div>
     );
 }

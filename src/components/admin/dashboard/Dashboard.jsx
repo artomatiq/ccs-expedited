@@ -1,6 +1,8 @@
 function Dashboard() {
     return (
-        null
+        <div className="dashboard-container">
+            This is the Dashboard
+        </div>
     );
 }
 
