@@ -8,16 +8,18 @@ body {
 }
 
 .app-container {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
 
+.top-row {
+  display: flex;
+}
+
 .sidebar-container {
-  grid-column: 1;
-  grid-row: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,8 +30,6 @@ body {
 }
 
 .main-container {
-  grid-column: 2;
-  grid-row: 1;
   width: 75vw;
   height: 100vh;
   display: flex;
