@@ -8,6 +8,7 @@ body {
 }
 
 .app-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -27,13 +28,23 @@ body {
   width: 25vw;
   height: 100vh;
   background-color: #63adf6;
+
+  transition: transform 0.5s ease-out;
 }
 
 .main-container {
+  position: absolute;
+  right: 0;
   width: 75vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: rgb(210, 210, 210);
+
+  transition: width 0.5s ease-out;
+}
+
+.main-container.unshifted {
+  width: 100vw;
 }
 

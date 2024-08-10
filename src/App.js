@@ -10,7 +10,7 @@ import Reports from './components/admin/reports/Reports';
 
 function App() {
 
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
   const [menuSelection, setMenuSelection] = useState(null);
   const [user, setUser] = useState('admin');
 
@@ -36,7 +36,7 @@ function App() {
             ? <Sidebar className="show" setMenuSelection={setMenuSelection} />
             : <Sidebar className="hide" setMenuSelection={setMenuSelection} />
         }
-        <div className="main-container">
+        <div className={`main-container ${showSidebar? 'shifted' : 'unshifted'}`}>
           <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
           {selectedComponent()}
         </div>

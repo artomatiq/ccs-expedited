@@ -12,6 +12,11 @@
     color: white;
 }
 
-.sidebar-container.hide {
-    left: -100%;
+.sidebar-container.show {
+    transform: translateX(0);
 }
+
+.sidebar-container.hide {
+    transform: translateX(-100%);
+}
+
