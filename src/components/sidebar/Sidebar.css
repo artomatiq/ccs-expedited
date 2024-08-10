@@ -1,3 +1,5 @@
+
+
 .logo-container {
     height: auto;
     padding: 3rem 0 5rem 0;
@@ -7,16 +9,16 @@
     width: 50%;
 }
 
+.sidebar-container.hide h3 {
+    display: none;
+}
+
 .logo-container h3 {
     font-weight: 300;
     color: white;
 }
 
-.sidebar-container.show {
-    transform: translateX(0);
-}
-
-.sidebar-container.hide {
-    transform: translateX(-100%);
+.menu-button {
+    padding-top: 2rem;
 }
 

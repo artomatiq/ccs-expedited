@@ -33,11 +33,11 @@ function App() {
 
       <div className='top-row'>
         {showSidebar
-            ? <Sidebar className="show" setMenuSelection={setMenuSelection} />
-            : <Sidebar className="hide" setMenuSelection={setMenuSelection} />
+            ? <Sidebar className="show" setMenuSelection={setMenuSelection} showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+            : <Sidebar className="hide" setMenuSelection={setMenuSelection} showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
         }
-        <div className={`main-container ${showSidebar? 'shifted' : 'unshifted'}`}>
-          <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        <div className='main-container'>
+          <Header />
           {selectedComponent()}
         </div>
       </div>

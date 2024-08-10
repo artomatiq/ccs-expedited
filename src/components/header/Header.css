@@ -2,7 +2,7 @@
     height: 10vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 
     background-color: antiquewhite;
@@ -27,8 +27,4 @@
 .profile-pic img {
     width: 4rem;
 
-}
-
-.menu-button {
-    margin-left: 1rem;
 }

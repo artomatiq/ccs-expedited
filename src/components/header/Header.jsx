@@ -5,17 +5,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 
-function Header({showSidebar, setShowSidebar}) {
-
-    const handleMenuClick = () => {
-        setShowSidebar(!showSidebar);
-    }
+function Header() {
 
     return (
         <div className="header-container">
-            <div className="menu-button">
-                <FontAwesomeIcon icon={faBars} className='menu-icon' onClick={handleMenuClick}/>
-            </div>
             <div className="profile-container">
                 <div className="profile-pic">
                     <img src='assets/icon.png' alt='profile' />

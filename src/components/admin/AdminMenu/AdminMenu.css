@@ -1,0 +1,45 @@
+.menu-container {
+    width: 75%;
+    padding: 0;
+    text-align: left;
+}
+
+.menu-container a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.menu-item:hover {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.434);
+}
+
+.menu-hover {
+    position: absolute;
+    left: 100px;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+.sidebar-container.show .menu-hover {
+    opacity: 0;
+}
+

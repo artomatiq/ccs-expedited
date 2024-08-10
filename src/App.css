@@ -9,42 +9,56 @@ body {
 
 .app-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   height: 100vh;
   width: 100vw;
 }
 
-.top-row {
+/* .top-row {
   display: flex;
-}
+} */
 
 .sidebar-container {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 25vw;
+  width: 250px;
   height: 100vh;
   background-color: #63adf6;
 
-  transition: transform 0.5s ease-out;
+  transition: all 0.5s ease;
 }
 
 .main-container {
-  position: absolute;
-  right: 0;
-  width: 75vw;
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: rgb(210, 210, 210);
 
-  transition: width 0.5s ease-out;
+  transition: all 0.5s ease;
 }
 
-.main-container.unshifted {
-  width: 100vw;
+.sidebar-container.hide {
+  width: 75px;
 }
+
+.sidebar-container.hide .menu-name {
+  display: none;
+}
+
+.sidebar-container.hide  ~ .main-container{
+  left: 75px;
+  width: calc(100% - 75px);
+}
+
+/* .sidebar-container.hide {
+  transform: translateX(-100%);
+} */
 
