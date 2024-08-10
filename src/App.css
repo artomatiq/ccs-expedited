@@ -45,17 +45,13 @@ body {
   transition: all 0.5s ease;
 }
 
-.sidebar-container.hide {
-  width: 75px;
-}
-
-.sidebar-container.hide .menu-name {
-  display: none;
-}
-
-.sidebar-container.hide  ~ .main-container{
+.sidebar-container.hide ~ .main-container {
   left: 75px;
   width: calc(100% - 75px);
+}
+
+.sidebar-container.hide {
+  width: 75px;
 }
 
 /* .sidebar-container.hide {
