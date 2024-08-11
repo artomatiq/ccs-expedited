@@ -19,7 +19,6 @@ function MainContent() {
     const role = 'admin';
 
     return (
-
         <Routes>
             <Route path='/' element={role === 'admin' ? <AdminDashboard/> : <DriverClock/>} />
             <Route path='dashboard' element={role === 'admin' ? <AdminDashboard/> : <DriverDashboard/>} />
