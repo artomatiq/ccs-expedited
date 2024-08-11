@@ -1,6 +1,8 @@
 function Reports() {
     return (
-        null
+        <div className="admin reports-container">
+            Admin reports
+        </div>
     );
 }
 

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import MainContent from './components/main-content/MainContent';
 
 import Dashboard from './components/admin/admin-dashboard/AdminDashboard';
 import Payroll from './components/admin/admin-payroll/AdminPayroll';
@@ -40,7 +41,8 @@ function App() {
             />
         <div className='main-container'>
           <Header />
-          {selectedComponent()}
+          {/* {selectedComponent()} */}
+          <MainContent/>
         </div>
       </div>
 
