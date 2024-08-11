@@ -29,6 +29,7 @@
     background-color: #63adf6;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .admin .driver-select-container {
@@ -39,4 +40,5 @@
     background-color: #63adf6;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }

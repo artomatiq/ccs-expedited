@@ -32,10 +32,12 @@ function App() {
     <div className='app-container'>
 
       <div className='top-row'>
-        {showSidebar
-            ? <Sidebar className="show" setMenuSelection={setMenuSelection} showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-            : <Sidebar className="hide" setMenuSelection={setMenuSelection} showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-        }
+            <Sidebar 
+              setMenuSelection={setMenuSelection} 
+              showSidebar={showSidebar} 
+              setShowSidebar={setShowSidebar} 
+              className={showSidebar? 'show' : 'hide'}
+            />
         <div className='main-container'>
           <Header />
           {selectedComponent()}
