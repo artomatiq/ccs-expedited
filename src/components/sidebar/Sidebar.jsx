@@ -4,7 +4,7 @@ import DriverMenu from '../driver/driver-menu/DriverMenu';
 
 function Sidebar({ className, showSidebar, setShowSidebar }) {
 
-    const role = 'driver';
+    const role = 'admin';
 
     const handleMenuClick = () => {
         setShowSidebar(!showSidebar);
