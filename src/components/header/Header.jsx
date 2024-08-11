@@ -11,7 +11,7 @@ function Header() {
         <div className="header-container">
             <div className="profile-container">
                 <div className="profile-pic">
-                    <img src='assets/icon.png' alt='profile' />
+                    <img src='assets/icon.png' alt='profile' /> 
                 </div>
                 
             </div>

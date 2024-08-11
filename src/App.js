@@ -1,12 +1,12 @@
 import './App.css';
 import { useState } from 'react';
-import Sidebar from './components/sidebar/Sidebar';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Sidebar from './components/Sidebar/Sidebar';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
-import Dashboard from './components/admin/dashboard/Dashboard';
-import Payroll from './components/admin/payroll/Payroll';
-import Reports from './components/admin/reports/Reports';
+import Dashboard from './components/admin/admin-dashboard/AdminDashboard';
+import Payroll from './components/admin/admin-payroll/AdminPayroll';
+import Reports from './components/admin/admin-reports/AdminReports';
 
 function App() {
 

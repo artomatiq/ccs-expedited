@@ -1,0 +1,42 @@
+.admin.dash-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    height: 100%;
+}
+
+.admin .dash-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+
+.admin .dash-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+}
+
+.admin .date-container {
+    padding: 0.5rem;
+    margin: 1rem;
+    height: 11%;
+    background-color: #63adf6;
+    border-radius: 10px;
+    color: white;
+}
+
+.admin .driver-select-container {
+    position: absolute;
+    right: 0;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: #63adf6;
+    border-radius: 10px;
+    color: white;
+}

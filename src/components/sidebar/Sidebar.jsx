@@ -1,5 +1,5 @@
 import './Sidebar.css';
-import AdminMenu from '../admin/AdminMenu/AdminMenu';
+import AdminMenu from '../admin/admin-menu/AdminMenu';
 
 function Sidebar({ className, showSidebar, setShowSidebar }) {
 
