@@ -1,18 +1,28 @@
 .menu-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 60%;
+    width: 100%;
+    top: 35%;
+    left: 13px;
     padding: 0;
     text-align: left;
+}
+
+.sidebar-container.hide .menu-container {
+    width: auto;
 }
 
 .menu-item {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 214px;
     padding: 0.5rem;
     padding-right: 0;
     list-style-type: none;
+    cursor: pointer;
 }
 
 .menu-item.logout {
@@ -41,12 +51,6 @@
 
 .menu-icon {
     font-size: 2rem;
-    padding-right: 1rem;
-    cursor: pointer;
-}
-
-.sidebar-container.hide .menu-icon {
-    padding: 0;
 }
 
 
@@ -54,7 +58,8 @@
 
 
 .menu-name {
-    padding-right: 0.5rem;
+    position: absolute;
+    padding-left: 4rem;
 }
 
 .sidebar-container.hide .menu-name {
@@ -65,7 +70,7 @@
 
 .menu-hover {
     position: absolute;
-    left: 100px;
+    left: 75px;
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.434);
     box-shadow: 0.5rem 0.4rem 0.3rem 0.1rem rgba(0, 0, 0, 0.25);

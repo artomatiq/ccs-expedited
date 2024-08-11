@@ -1,4 +1,24 @@
+.sidebar-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 100vh;
+    background-color: #63adf6;
 
+    transition: all 0.5s ease;
+}
+
+.sidebar-container.hide~.main-container {
+    left: 75px;
+    width: calc(100% - 75px);
+}
+
+.sidebar-container.hide {
+    width: 75px;
+}
 
 .logo-container {
     height: auto;
@@ -10,15 +30,21 @@
 }
 
 .sidebar-container.hide h3 {
-    display: none;
+    opacity: 0;
+    transition: all 0.1s ease 0s;
 }
 
 .logo-container h3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     font-weight: 300;
     color: white;
+    opacity: 1;
+    transition: all 0.75s ease 0.25s;
 }
 
 .menu-button {
     padding-top: 2rem;
 }
-

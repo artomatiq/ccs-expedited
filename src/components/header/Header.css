@@ -5,7 +5,8 @@
     justify-content: right;
     align-items: center;
 
-    background-color: antiquewhite;
+    /* background-color: #63acf62c; */
+    background-color: linear-gradient(to left, rgba(99, 172, 246, 0.2), rgba(99, 172, 246, 0));
 }
 
 .profile-container {
