@@ -16,7 +16,7 @@ import {Routes, Route} from 'react-router-dom';
 
 function MainContent() {
 
-    const role = 'admin';
+    const role = 'driver';
 
     return (
 

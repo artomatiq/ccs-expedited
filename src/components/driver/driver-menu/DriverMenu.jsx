@@ -4,22 +4,22 @@ function DriverMenu() {
     return (
         <ul className="driver menu-container">
             <li className="menu-item">
-                <i className='bx bx-tachometer menu-icon'></i>
-                <span className="menu-name">Clock</span>
-                <span className="menu-hover">Clock</span>
+                <i className='bx bx-time-five menu-icon'></i>
+                <span className="menu-name">Clock-In</span>
+                <span className="menu-hover">Clock-In</span>
             </li>
             <li className="menu-item">
-                <i className='bx bx-money-withdraw menu-icon'></i>
+                <i className='bx bx-tachometer menu-icon'></i>
                 <span className="menu-name">Dashboard</span>
                 <span className="menu-hover">Dashboard</span>
             </li>
             <li className="menu-item">
-                <i className='bx bxs-report menu-icon'></i>
+                <i class='bx bx-dollar menu-icon' ></i>
                 <span className="menu-name">Earnings</span>
                 <span className="menu-hover">Earnings</span>
             </li>
             <li className="menu-item">
-                <i class='bx bx-time-five menu-icon'></i>
+                <i className='bx bxs-report menu-icon'></i>
                 <span className="menu-name">Reports</span>
                 <span className="menu-hover">Reports</span>
             </li>
