@@ -1,7 +1,10 @@
 import './Sidebar.css';
 import AdminMenu from '../admin/admin-menu/AdminMenu';
+import DriverMenu from '../driver/driver-menu/DriverMenu';
 
 function Sidebar({ className, showSidebar, setShowSidebar }) {
+
+    const role = 'admin';
 
     const handleMenuClick = () => {
         setShowSidebar(!showSidebar);
@@ -16,7 +19,7 @@ function Sidebar({ className, showSidebar, setShowSidebar }) {
                 <img src="/assets/logo.png" alt="Logo" className='logo-img' />
                 <h3>Carolinas Courier Services</h3>
             </div>
-            <AdminMenu />
+            { role === 'admin' ? <AdminMenu /> : <DriverMenu /> }
         </div>
     );
 }

@@ -7,7 +7,7 @@ function AdminMenu() {
     
 
     return (
-        <ul className="menu-container">
+        <ul className="admin menu-container">
             <li className="menu-item">
                 <a href='#1'>
                     <i className='bx bx-tachometer menu-icon'></i>
