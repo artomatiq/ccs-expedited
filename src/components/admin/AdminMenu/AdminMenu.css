@@ -25,6 +25,10 @@
     cursor: pointer;
 }
 
+.sidebar-container.hide .menu-item {
+    width: auto;
+}
+
 .menu-item.logout {
     margin-top: auto;
 }
