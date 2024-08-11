@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react';
-import Sidebar from './components/Sidebar/Sidebar';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Sidebar from './components/sidebar/Sidebar';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 import Dashboard from './components/admin/admin-dashboard/AdminDashboard';
 import Payroll from './components/admin/admin-payroll/AdminPayroll';
