@@ -3,8 +3,8 @@
     grid-row: 2;
     height: 10vh;
     text-align: center;
-    background-color: #63acf62c;
+    background-color: var(--header-color);
     color: black;
-    border-top: 4px solid #63adf6;
+    border-top: 4px solid var(--header-color);
 
 }

@@ -4,9 +4,9 @@
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    border-bottom: 3px solid #63adf6;
+    border-bottom: 3px solid var(--header-color);
 
-    background-color: #63acf62c;
+    background-color: var(--header-color);
 }
 
 .profile-container {
@@ -18,7 +18,7 @@
     justify-content: center;
     width: 4rem;
 
-    border: 2px solid #63adf6;
+    border: 2px solid var(--sidebar-color);
     border-radius: 50%;
     overflow: hidden;
 

@@ -2,15 +2,31 @@ import { ResponsiveLine } from '@nivo/line'
 
 function AdminLineGraph({ data }) {
 
+    const theme = {
+        axis: {
+            ticks: {
+                text: {
+                    fill: '#ff9513', 
+                },
+            },
+            legend: {
+                text: {
+                    fill: '#ff9513', 
+                },
+            },
+        },
+    };
+
     return (
         <ResponsiveLine
         data={data}
-        margin={{ top: 80, right: 0, bottom: 80, left: 0 }}
+        margin={{ top: 80, right: 80, bottom: 80, left: 80 }}
+
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',
-            min: 'auto',
-            max: 'auto',
+            min: '0',
+            max: '500',
             stacked: true,
             reverse: false
         }}
@@ -24,7 +40,7 @@ function AdminLineGraph({ data }) {
             legend: '',
             legendOffset: 36,
             legendPosition: 'middle',
-            truncateTickAt: 0
+            truncateTickAt: 0,
         }}
         axisLeft={{
             tickSize: 5,
@@ -44,7 +60,7 @@ function AdminLineGraph({ data }) {
         enableTouchCrosshair={false}
         enableGridX={false}
         useMesh={true}
-        colors="#FF8C00"
+        colors="#ff9513"
         legends={[
             {
                 anchor: 'bottom-right',
@@ -71,6 +87,7 @@ function AdminLineGraph({ data }) {
                 ]
             }
         ]}
+        theme={theme}
     />
     );
 }

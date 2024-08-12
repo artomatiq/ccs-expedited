@@ -5,15 +5,15 @@ const DummyData = [
         "data": [
             {
                 "x": "Aug",
-                "y": 291
+                "y": 191
             },
             {
                 "x": "Sep",
-                "y": 264
+                "y": 206
             },
             {
                 "x": "Oct",
-                "y": 206
+                "y": 264
             },
             {
                 "x": "Nov",
@@ -25,7 +25,7 @@ const DummyData = [
             },
             {
                 "x": "Jan",
-                "y": 269
+                "y": 274
             },
             {
                 "x": "Feb",
@@ -33,7 +33,7 @@ const DummyData = [
             },
             {
                 "x": "Mar",
-                "y": 15
+                "y": 185
             },
             {
                 "x": "Apr",
@@ -45,11 +45,11 @@ const DummyData = [
             },
             {
                 "x": "Jun",
-                "y": 78
+                "y": 175
             },
             {
                 "x": "Jul",
-                "y": 79
+                "y": 397
             },
             {
                 "x": "Aug",
