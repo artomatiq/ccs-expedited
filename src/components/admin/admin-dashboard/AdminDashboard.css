@@ -240,12 +240,12 @@
     
     .admin.dash-container {
         position: relative;
-        top: 75px;
+        top: 17px;
         /* display: flex; */
         /* flex-direction: column; */
-        /* justify-content: space-evenly; */
+        justify-content: space-around;
         /* align-items: center; */
-        /* height: 100%; */
+        height: 80rem;
     }
 
     .admin .dash-top {
@@ -279,9 +279,51 @@
         cursor: pointer;
     }
 
+    .admin .dash-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    .admin .dash-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
     .admin .graph-container {
         /* height: 300px; */
         width: 100%;
+    }
+
+    .admin .timer {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; */
+        margin-top: 1rem;
+    }
+
+    .admin .payable {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; */
+        margin-top: 4rem;
+    }
+
+    .admin .graph-container {
+        position: relative;
+        height: 300px;
+        width: 90%;
+        margin-bottom: 6rem;
     }
 
 }
