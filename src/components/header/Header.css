@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    border-bottom: 3px solid rgb(153, 170, 236);
+    border-bottom: 3px solid #63adf6;
 
     background-color: #63acf62c;
 }
@@ -18,7 +18,7 @@
     justify-content: center;
     width: 4rem;
 
-    border: 2px solid rgb(153, 170, 236);
+    border: 2px solid #63adf6;
     border-radius: 50%;
     overflow: hidden;
 

@@ -34,7 +34,7 @@ a {
     width: auto;
 }
 
-.menu-item.logout {
+.logout {
     margin-top: auto;
 }
 
@@ -75,6 +75,7 @@ a {
     padding: 0.4rem 0.75rem;
     z-index: 10;
     opacity: 0;
+    color: black;
 }
 
 .menu-container .menu-item:hover .menu-hover {

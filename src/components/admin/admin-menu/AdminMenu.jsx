@@ -43,7 +43,7 @@ function AdminMenu() {
                     <span className="menu-hover">Settings</span>
                 </li>
             </Link>
-            <Link to='logout'>
+            <Link to='logout' className='logout'>
                 <li className="menu-item logout">
                     <i class='bx bx-log-out menu-icon' ></i>
                     <span className="menu-name">Logout</span>
