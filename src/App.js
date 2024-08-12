@@ -26,6 +26,8 @@ function App() {
 // const isMobile = isSmartphone();
 const isMobile = true
 
+if (isMobile) setShowSidebar(false);
+
   return (
     <div className='app-container'>
 
