@@ -3,6 +3,7 @@
 :root {
   --sidebar-color: #63adf6;
   --header-color: #63acf62c;
+  --line-graph-color: #ff9513;
 }
 
 [data-theme='dark'] {
