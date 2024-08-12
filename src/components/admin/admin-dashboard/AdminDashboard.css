@@ -28,7 +28,7 @@
     height: 300px;
     width: 70%;
     border-radius: 20px;
-    background-color: #63adf6;
+    background-color: var(--header-color);
 }
 
 .admin .date-container {

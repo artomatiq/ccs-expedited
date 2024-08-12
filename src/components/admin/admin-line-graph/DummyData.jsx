@@ -4,10 +4,6 @@ const DummyData = [
         "color": "hsl(240, 100%, 27%)",
         "data": [
             {
-                "x": "Aug",
-                "y": 191
-            },
-            {
                 "x": "Sep",
                 "y": 206
             },
@@ -53,7 +49,7 @@ const DummyData = [
             },
             {
                 "x": "Aug",
-                "y": 79
+                "y": 367
             }
         ]
     },

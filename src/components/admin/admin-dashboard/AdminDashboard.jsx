@@ -25,6 +25,7 @@ function AdminDashboard() {
                 </div>
             </div>
             <div className="dash-bottom">
+                <h3></h3>
                 <AdminLineGraph data={DummyData} className="line-graph"/>
             </div>
         </div>
