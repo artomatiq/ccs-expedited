@@ -29,3 +29,21 @@
     width: 4rem;
 
 }
+
+@media screen and (max-width: 768px) {
+    
+    .header-container {
+    }
+    
+    .profile-pic {
+    }
+    
+    .profile-pic img {
+
+    
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+}

@@ -39,4 +39,22 @@ body {
 }
 
 
+@media screen and (max-width: 768px) {
+    
+  .app-container {
+    /* position: relative;
+    height: 100vh;
+    width: 100vw; */
+  }
+  
+  
+  .main-container {
+    position: relative;
+    left: 175px;
+    width: calc(100% - 175px);
+  }
+}
 
+@media screen and (max-width: 425px) {
+  
+}

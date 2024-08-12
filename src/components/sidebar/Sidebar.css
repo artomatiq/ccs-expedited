@@ -48,3 +48,39 @@
 .menu-button {
     padding-top: 2rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    
+    .sidebar-container {
+        width: 175px;
+    }
+    
+    .sidebar-container.hide~.main-container {
+        left: 75px;
+        width: calc(100% - 75px);
+    }
+    
+    .sidebar-container.hide {
+        width: 75px;
+    }
+    
+    .logo-container {
+        /* padding: 3rem 0 5rem 0; */
+    }
+    
+    .logo-img {
+        /* width: 50%; */
+    }
+    
+    .logo-container h3 {
+    }
+    
+    .menu-button {
+        padding-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+}
