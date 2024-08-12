@@ -24,7 +24,7 @@ function App() {
 }
 
 // const isMobile = isSmartphone();
-const isMobile = true
+const isMobile = isSmartphone();
 
 if (isMobile) setShowSidebar(false);
 
