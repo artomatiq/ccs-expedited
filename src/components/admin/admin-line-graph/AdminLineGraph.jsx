@@ -41,7 +41,7 @@ function AdminLineGraph({ data }) {
     return (
         <ResponsiveLine
             data={data}
-            margin={{ top: 40, right: 120, bottom: 50, left: 100 }}
+            margin={{ top: 40, right: !isMobile? 120 : 20, bottom: 50, left: !isMobile? 100 : 40 }}
             xScale={{ type: 'point' }}
             yScale={{
                 type: 'linear',
