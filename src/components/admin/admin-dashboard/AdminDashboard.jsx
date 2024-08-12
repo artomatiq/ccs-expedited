@@ -5,7 +5,7 @@ import DummyData from '../admin-line-graph/DummyData';
 
 function AdminDashboard() {
 
-    const payroll = 1153.40;
+    const payroll = 1327.40;
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -18,10 +18,10 @@ function AdminDashboard() {
                 <div>
                 </div>
                 <div className="date-container">
-                    Today <i className='bx bx-chevron-down'></i>
+                    This Week <i className='bx bx-chevron-down'></i>
                 </div>
                 <div className="driver-select-container">
-                    Driver 1 <i className='bx bx-chevron-down'></i>
+                    All Drivers <i className='bx bx-chevron-down'></i>
                 </div>
             </div>
             <div className="dash-middle">
@@ -29,7 +29,7 @@ function AdminDashboard() {
                     <h3>Drive Time</h3>
                     <div className="dash drive-timer">
                         <div className="hours">
-                            35h
+                            62h
                         </div>
                         <div className="minutes">
                             43m
