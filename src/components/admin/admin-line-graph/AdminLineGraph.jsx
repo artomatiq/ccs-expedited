@@ -2,9 +2,7 @@ import { ResponsiveLine } from '@nivo/line'
 
 function AdminLineGraph({ dataa }) {
 
-    const data = dataa
-        ? dataa
-        : [
+    const data = [
             {
                 "id": "japan",
                 "color": "hsl(244, 70%, 50%)",

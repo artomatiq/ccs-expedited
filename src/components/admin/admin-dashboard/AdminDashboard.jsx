@@ -1,4 +1,5 @@
 import './AdminDashboard.css'
+import AdminLineGraph from '../admin-line-graph/AdminLineGraph';
 
 function AdminDashboard() {
     return (
@@ -7,10 +8,10 @@ function AdminDashboard() {
                 <div>
                 </div>
                 <div className="date-container">
-                    Today <i class='bx bx-chevron-down'></i>
+                    Today <i className='bx bx-chevron-down'></i>
                 </div>
                 <div className="driver-select-container">
-                    Driver 1 <i class='bx bx-chevron-down'></i>
+                    Driver 1 <i className='bx bx-chevron-down'></i>
                 </div>
             </div>
             <div className="dash-middle">
@@ -22,7 +23,7 @@ function AdminDashboard() {
                 </div>
             </div>
             <div className="dash-bottom">
-                Activity
+                <AdminLineGraph dataa={4}/>
             </div>
         </div>
     );

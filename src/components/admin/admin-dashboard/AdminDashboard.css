@@ -22,6 +22,12 @@
     height: 30%;
 }
 
+.admin .dash-bottom {
+    height: 20rem;
+    width: 20rem;
+    border: 1px solid black;
+}
+
 .admin .date-container {
     padding: 0.5rem;
     margin: 1rem;
