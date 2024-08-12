@@ -23,8 +23,9 @@
 }
 
 .admin .dash-bottom {
-    height: 20rem;
-    width: 20rem;
+    margin-bottom: 2rem;
+    height: 50%;
+    width: 80%;
     border: 1px solid black;
 }
 

@@ -1,6 +1,8 @@
 import './AdminDashboard.css'
 import AdminLineGraph from '../admin-line-graph/AdminLineGraph';
 
+import DummyData from '../admin-line-graph/DummyData';
+
 function AdminDashboard() {
     return (
         <div className="admin dash-container">
@@ -23,7 +25,7 @@ function AdminDashboard() {
                 </div>
             </div>
             <div className="dash-bottom">
-                <AdminLineGraph dataa={4}/>
+                <AdminLineGraph data={DummyData}/>
             </div>
         </div>
     );
