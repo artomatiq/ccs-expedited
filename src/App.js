@@ -9,15 +9,39 @@ function App() {
 
   const [showSidebar, setShowSidebar] = useState(true);
 
+  function isSmartphone() {
+    const userAgent = navigator.userAgent || window.opera;
+    if (/android/i.test(userAgent)) {
+        return true;
+    }
+    if (/iPhone|iPod|iPad/i.test(userAgent)) {
+        return true;
+    }
+    if (/windows phone/i.test(userAgent)) {
+        return true;
+    }    
+    return false;
+}
+
+// const isMobile = isSmartphone();
+const isMobile = true
+
   return (
     <div className='app-container'>
 
-      <div className='top-row'>
-            <Sidebar 
+      {isMobile && <Sidebar 
               showSidebar={showSidebar} 
               setShowSidebar={setShowSidebar} 
               className={showSidebar? 'show' : 'hide'}
-            />
+        />
+      }
+
+      <div className='top-row'>
+            {!isMobile && <Sidebar 
+              showSidebar={showSidebar} 
+              setShowSidebar={setShowSidebar} 
+              className={showSidebar? 'show' : 'hide'}
+            />}
         <div className='main-container'>
           <Header />
           <MainContent/>

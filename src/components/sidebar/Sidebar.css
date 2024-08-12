@@ -67,4 +67,54 @@
 }
 
 @media screen and (max-width: 500px) {
+    .sidebar-container {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        text-align: center;
+        height: 75px;
+        background-color: var(--sidebar-color);
+
+        z-index: 10;
+    
+        transition: all 0.5s ease;
+    }
+
+    .sidebar-container.hide {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 75px;
+        background-color: var(--sidebar-color);
+
+        z-index: 10;
+    
+        transition: all 0.5s ease;
+    }
+
+    .logo-container {
+        position: relative;
+        padding: 10px;
+        height: auto;
+        left: 0;
+        top: 0;
+        /* padding: 3rem 0 5rem 0; */
+    }
+    
+    .logo-img {
+        width: 60px;
+    }
+
+    .menu-button {
+        padding: 10px;
+    }
 }

@@ -2,6 +2,24 @@ import { ResponsiveLine } from '@nivo/line'
 
 function AdminLineGraph({ data }) {
 
+    //todo
+    //access this with context
+    function isSmartphone() {
+        const userAgent = navigator.userAgent || window.opera;
+        if (/android/i.test(userAgent)) {
+            return true;
+        }
+        if (/iPhone|iPod|iPad/i.test(userAgent)) {
+            return true;
+        }
+        if (/windows phone/i.test(userAgent)) {
+            return true;
+        }    
+        return false;
+    }
+
+    const isMobile = isSmartphone();
+
     /**
     * @type {import('@nivo/core').Theme}
     */
