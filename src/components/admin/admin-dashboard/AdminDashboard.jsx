@@ -15,7 +15,7 @@ function AdminDashboard() {
     return (
         <div className="admin dash-container">
             <div className="dash-top">
-                <div>
+                <div className='empty-div'>
                 </div>
                 <div className="date-container">
                     This Week <i className='bx bx-chevron-down'></i>

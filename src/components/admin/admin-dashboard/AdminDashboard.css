@@ -239,15 +239,49 @@
 @media screen and (max-width: 500px) {
     
     .admin.dash-container {
-        display: flex;
-        flex-direction: column;
+        position: relative;
+        top: 75px;
+        /* display: flex; */
+        /* flex-direction: column; */
         /* justify-content: space-evenly; */
-        align-items: center;
-        height: 100%;
+        /* align-items: center; */
+        /* height: 100%; */
     }
+
+    .admin .dash-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 10%;
+    }
+
+    .admin .dash-top .empty-div {
+        display: none;
+    }
+
+    .admin .date-container {
+        position: relative;
+        padding: 0.5rem;
+        margin: 1rem;
+        height: auto;
+    }
+    
+    .admin .driver-select-container {
+        position: relative;
+        right: auto;
+        padding: 0.5rem;
+        margin: 1rem;
+        background-color: var(--sidebar-color);
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
     .admin .graph-container {
         /* height: 300px; */
-        width: 90%;
+        width: 100%;
     }
 
 }
