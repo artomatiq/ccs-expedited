@@ -237,9 +237,17 @@
 }
 
 @media screen and (max-width: 500px) {
+    
+    .admin.dash-container {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        align-items: center;
+        height: 100%;
+    }
     .admin .graph-container {
         /* height: 300px; */
         width: 90%;
     }
-    
+
 }

@@ -27,7 +27,6 @@
 
 .profile-pic img {
     width: 4rem;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -44,6 +43,25 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
+
+    .header-container {
+        position: relative;
+        top: 75px;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid var(--header-color);
     
+        background-color: var(--header-color);
+    }
+
+    .profile-pic {
+        display: flex;
+        justify-content: center;
+    
+        margin-right: 0;
+    }
 }
