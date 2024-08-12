@@ -17,7 +17,7 @@ function Sidebar({ className, showSidebar, setShowSidebar }) {
             </div>
             <div className="logo-container">
                 <img src="/assets/logo.png" alt="Logo" className='logo-img' />
-                <h3>Carolinas Courier Services</h3>
+                <h3>Carolina's Courier Services</h3>
             </div>
             { role === 'admin' ? <AdminMenu /> : <DriverMenu /> }
         </div>
