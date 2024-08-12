@@ -106,9 +106,35 @@ a {
 
 @media screen and (max-width: 500px) {
 
-    .sidebar-container.hide .menu-container {
-        display: none;
+    .sidebar-container.show .menu-container {
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50vw;
+        top: 0;
+        left: 13px;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+
+        opacity: 1;
     }
+
+    .sidebar-container.hide .menu-container {
+        opacity: 0;
+        display: none;
+
+        transition: all 0.5s ease;
+    }
+
+    .logout {
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+
+    
 
     .menu-hover {
         display: none;
