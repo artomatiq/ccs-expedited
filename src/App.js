@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -26,7 +26,11 @@ function App() {
 // const isMobile = isSmartphone() ;
 const isMobile = isSmartphone();
 
-if (isMobile) setShowSidebar(false);
+useEffect(() => {
+  if (isMobile) setShowSidebar(false);
+}, []);
+
+
 
   return (
     <div className='app-container'>
