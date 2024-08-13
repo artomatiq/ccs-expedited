@@ -23,7 +23,7 @@ function App() {
     return false;
 }
 
-// const isMobile = isSmartphone();
+// const isMobile = isSmartphone() ;
 const isMobile = isSmartphone();
 
 if (isMobile) setShowSidebar(false);
