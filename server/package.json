@@ -12,5 +12,8 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
