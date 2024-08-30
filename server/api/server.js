@@ -5,7 +5,7 @@ const server = express();
 server.use(express.json());
 
 server.get('/', (req, res) => {
-    res.status(200).json({ api: 'running on Vercel' });
+    res.status(300).json({ api: 'running on Vercel' });
 })
 
 module.exports = server;
