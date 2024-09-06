@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx sequelize-cli db:migrate --config data/config/config.json --migrations-path data/migrations",
+    "seed": "npx sequelize-cli db:seed --config data/config/config.json --seeds-path data/seeders",
+    "rollback": "npx sequelize-cli db:migrate:undo --config data/config/config.json --migrations-path data/migrations",
+    "resetDb": "npx sequelize-cli db:migrate:undo:all --config data/config/config.json --migrations-path data/migrations"
   },
   "keywords": [],
   "author": "",

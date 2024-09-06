@@ -1,10 +1,12 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": "art99omatiq",
+    "database": "ccs_expedited",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "migrationStoragePath": "data/migrations",
+    "seedStoragePath": "data/seeders"
   },
   "test": {
     "username": "root",
