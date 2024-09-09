@@ -46,17 +46,6 @@ module.exports = {
       profile_picture: {
         type: Sequelize.STRING,
         allowNull: true
-      },
-      created_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW,
-      },
-      updated_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW,
-        onUpdate: Sequelize.NOW
       }
     })
   },
