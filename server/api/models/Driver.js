@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         email: {
             type: DataTypes.STRING(100),
-            alloqNull: false,
+            allowNull: false,
             unique: true
         },
         phone: {
@@ -24,21 +24,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         hourly_rate: {
             type: DataTypes.DECIMAL(4, 2),
-            alloqNull: false
+            allowNull: false
         },
         profile_picture: {
-            type: DataTypes.string(255),
+            type: DataTypes.STRING(255),
             allowNull: true
-        },
-        created_at: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW
-        },
-        updated_at: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
         }
     }, {
         timestamps: true,
