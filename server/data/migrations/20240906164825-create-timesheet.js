@@ -36,6 +36,10 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
+      date: {
+        type: Sequelize.DATEONLY,
+        allowNull: false,
+      },
       clock_in: {
         type: Sequelize.DATE,
         allowNull: true,
@@ -51,10 +55,6 @@ module.exports = {
       clock_out: {
         type: Sequelize.DATE,
         allowNull: true
-      },
-      date: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
       }
     })
   },

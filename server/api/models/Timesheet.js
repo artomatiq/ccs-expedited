@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
             onUpdate: 'CASCADE',
             onDelete: 'CASCADE'
         },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false
+        },
         clock_in: {
             type: DataTypes.DATE,
             allowNull: true
@@ -32,10 +36,6 @@ module.exports = (sequelize, DataTypes) => {
         clock_out: {
             type: DataTypes.DATE,
             allowNull: true
-        },
-        date: {
-            type: DataTypes.DATEONLY,
-            allowNull: false
         }
     }, {
             timestamps: false,
