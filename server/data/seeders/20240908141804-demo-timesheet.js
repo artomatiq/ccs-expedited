@@ -6,9 +6,7 @@ const timesheetGenerator = require('../../utils/timesheetGenerator');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    // await queryInterface.bulkInsert('timesheet', [
-
-    // ]);
+    await queryInterface.bulkInsert('timesheet', timesheetGenerator());
   },
 
   async down (queryInterface, Sequelize) {
