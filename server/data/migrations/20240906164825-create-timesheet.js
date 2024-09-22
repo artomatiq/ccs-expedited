@@ -17,7 +17,6 @@ CREATE TABLE timesheet (
 
 */
 
-
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('timesheet', {
