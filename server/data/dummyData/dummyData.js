@@ -1,4 +1,4 @@
-const data = [
+const dummyData = [
     {
         "id": 1,
         "driver_id": 1,
@@ -315,3 +315,5 @@ const data = [
         "clock_out": "2023-08-14 17:00:00"
     }
 ]
+
+module.exports = dummyData;

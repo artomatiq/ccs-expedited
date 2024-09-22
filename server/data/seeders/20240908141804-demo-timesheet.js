@@ -2,14 +2,14 @@
 
 /** @type {import('sequelize-cli').Migration} */
 
-const timesheetGenerator = require('../../utils/timesheetGenerator');
+const dummyData = require('../dummyData/dummyData');
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('timesheet', timesheetGenerator());
+    await queryInterface.bulkInsert('timesheet', dummyData);
   },
 
   async down (queryInterface, Sequelize) {
-
+    await queryInterface.bulkDelete('timesheet', null, {});
   }
 };
