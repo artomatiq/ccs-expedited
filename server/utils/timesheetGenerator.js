@@ -47,6 +47,7 @@ function generateShiftsForDate(date) {
 
     const numberOfDriversToday = Math.floor(Math.random() * numberOfDrivers) + 1;
 
+    //assign random drivers for given date
     const driversWorkingToday = [];
     while (driversWorkingToday.length < numberOfDriversToday) {
         //pick random driver ID
@@ -58,9 +59,12 @@ function generateShiftsForDate(date) {
         }
     }
 
+    //create an entry for each driver
     driversWorkingToday.forEach(driverId => {
+        //pick number of shifts
         const numberOfShifts = Math.random() < 0.8 ? 1 : 2; //20% of the time a driver works 2 shifts in same day
 
+        //add each shift (max 2) to entries with its time data
         for (let i = 0; i < numberOfShifts; i++) {
             const clockIn = getRandomTime(date, 6, 16); //get random time between 6am and 4pm
 
@@ -88,6 +92,15 @@ function generateShiftsForDate(date) {
                 clockPause = pauseStart;
                 clockResume = pauseEnd;
             }
+
+            entries.push( {
+                driver_id: driverId,
+                date: date.toISOString().split('T')[0],
+                clock_in: formatDateTime(clockIn),
+                clock_pause: clockPause ? formatDateTime(clockPause) : null,
+                clock_resume: clockResume ? formatDateTime(clockResume) :null,
+                clock_out: formatDateTime(clockOut)
+            })
         }
     })
 }
