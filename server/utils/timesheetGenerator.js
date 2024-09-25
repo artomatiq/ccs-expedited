@@ -1,4 +1,6 @@
+const { create } = require('domain');
 const fs = require('fs');
+const path = require('path');
 
 const nationalHolidays = [
     // 2023
@@ -158,13 +160,20 @@ function generateTimesheetData(startDateStr, endDateStr) {
     return data;
 }
 
-const generatedData = generateTimesheetData('2023-08-01', '2023-09-31');
+function createDummyData(beginningDate, endingDate) {
+    const generatedData = generateTimesheetData(beginningDate, endingDate);
 
-fs.writeFileSync('../data/dummyData/dummyData.json',
-    JSON.stringify(generatedData, null, 2),
-    'utf-8'
-);
+    const filePath = path.join(__dirname, '../data/dummyData/dummyData.json');
 
-console.log('Data generation complete. Check dummyData.json');
+    fs.writeFileSync(
+        filePath,
+        JSON.stringify(generatedData, null, 2),
+        'utf-8'
+    );
 
+    console.log('Data generation complete. Check dummyData.json');
 
+    return generatedData;
+}
+
+module.exports = createDummyData;
