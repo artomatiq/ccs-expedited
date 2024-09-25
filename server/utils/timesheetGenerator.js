@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const nationalHolidays = [
     '2023-09-04', // Labor Day 2023
     '2023-11-23', // Thanksgiving Day 2023
@@ -37,7 +39,7 @@ function formatDateTime(date) {
 }
 
 function padZero(number) {
-    return number.toString().padZero(2, '0');
+    return number.toString().padStart(2, '0');
 }
 
 function generateShiftsForDate(date) {
@@ -102,5 +104,38 @@ function generateShiftsForDate(date) {
                 clock_out: formatDateTime(clockOut)
             })
         }
-    })
+    });
+
+    return entries;
 }
+
+function generateTimesheetData(startDateStr, endDateStr) {
+    const data = [];
+    let currentDate = new Date(startDateStr);
+    const endDate = new Date(endDateStr);
+    let idCounter = 1;
+
+    while (currentDate <= endDate) {
+        const isSunday = currentDate.getDay() === 0; //sunday is valued at 0
+
+        if (!isSunday && !isNationalHoliday(currentDate)) {
+            const dailyEntries = generateShiftsForDate(currentDate);
+            data.push(...dailyEntries);
+        }
+
+        //onto the next day of the month
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+
+    return data;
+}
+
+const generatedData = generateTimesheetData('2023-08-01', '2023-09-31');
+
+fs.writeFileSync('../data/dummyData/dummyData.json',
+    JSON.stringify(generatedData, null, 2),
+    'utf-8'
+);
+
+console.log('Data generation complete. Check dummyData.json');
+
