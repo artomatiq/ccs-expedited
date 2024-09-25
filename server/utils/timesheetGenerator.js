@@ -1,9 +1,20 @@
 const fs = require('fs');
 
 const nationalHolidays = [
+    // 2023
+    '2023-01-01', // New Year's Day 2023
+    '2023-01-16', // Martin Luther King Jr. Day 2023
+    '2023-02-20', // Presidents' Day 2023
+    '2023-05-29', // Memorial Day 2023
+    '2023-06-19', // Juneteenth 2023
+    '2023-07-04', // Independence Day 2023
     '2023-09-04', // Labor Day 2023
+    '2023-10-09', // Columbus Day 2023
+    '2023-11-10', // Veterans Day (observed) 2023
     '2023-11-23', // Thanksgiving Day 2023
     '2023-12-25', // Christmas Day 2023
+
+    // 2024
     '2024-01-01', // New Year's Day 2024
     '2024-01-15', // Martin Luther King Jr. Day 2024
     '2024-02-19', // Presidents' Day 2024
@@ -11,6 +22,23 @@ const nationalHolidays = [
     '2024-06-19', // Juneteenth 2024
     '2024-07-04', // Independence Day 2024
     '2024-09-02', // Labor Day 2024
+    '2024-10-14', // Columbus Day 2024
+    '2024-11-11', // Veterans Day 2024
+    '2024-11-28', // Thanksgiving Day 2024
+    '2024-12-25', // Christmas Day 2024
+
+    // 2025
+    '2025-01-01', // New Year's Day 2025
+    '2025-01-20', // Martin Luther King Jr. Day 2025
+    '2025-02-17', // Presidents' Day 2025
+    '2025-05-26', // Memorial Day 2025
+    '2025-06-19', // Juneteenth 2025
+    '2025-07-04', // Independence Day 2025
+    '2025-09-01', // Labor Day 2025
+    '2025-10-13', // Columbus Day 2025
+    '2025-11-11', // Veterans Day 2025
+    '2025-11-27', // Thanksgiving Day 2025
+    '2025-12-25', // Christmas Day 2025
 ];
 
 function isNationalHoliday(date) {
@@ -138,4 +166,5 @@ fs.writeFileSync('../data/dummyData/dummyData.json',
 );
 
 console.log('Data generation complete. Check dummyData.json');
+
 
