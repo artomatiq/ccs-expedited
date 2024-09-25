@@ -4,8 +4,8 @@
 
 const createDummyData = require('../../utils/timesheetGenerator');
 
-const beginningDate = '2023-08-01';
-const endingDate = '2023-09-31';
+const beginningDate = '2023-09-01';
+const endingDate = '2024-09-24';
 
 const dummyData = createDummyData(beginningDate, endingDate);
 
