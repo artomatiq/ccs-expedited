@@ -6,6 +6,8 @@ const server = express();
 
 server.use(express.json());
 
+server.use('/api/drivers', require())
+
 server.get('/', (req, res) => {
     res.status(300).json({ api: 'running on Vercel' });
 })
