@@ -1,22 +1,19 @@
 const express = require('express');
-const Drivers = require('../models/Drivers');
+const driversController = require('../controllers/driversController');
 
 const router = express.Router();
 
-router.get('/', async (req, res, next) => {
-    try {
-        res.status(200).json({message: 'here are all the drivers'});
-    }
-    catch (error){
-        next(error);
-    }
-})
+router.post('/', driversController.createDriver);
+router.get('/', driversController.getAllDrivers);
+router.get('/:id', driversController.getDriverById);
+router.put('/:id', driversController.updateDriver);
+router.delete('/:id', driversController.deleteDriver);
 
-router.use((err, req, res, next) => {
-    res.status(err.status || 500).json({
-        message: err.message,
-        stack: err.stack
-    })
-})
+// router.use((err, req, res, next) => {
+//     res.status(err.status || 500).json({
+//         message: err.message,
+//         stack: err.stack
+//     })
+// })
 
 module.exports = router;
