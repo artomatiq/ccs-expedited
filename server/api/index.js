@@ -3,8 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const server = express();
 
-const driversRouter = require('./routers/drivers/driversRouter');
-const timesheetRouter = require('./routers/timesheet/timesheetRouter');
+const driversRouter = require('./routers/driversRouter');
+const timesheetRouter = require('./routers/timesheetRouter');
 
 server.use(express.json());
 

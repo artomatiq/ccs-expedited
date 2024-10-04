@@ -1,16 +1,21 @@
 const express = require('express');
-const Drivers = require('../../models/Drivers');
+// const serverless = require('serverless-http');
 
-const router = express.Router();
+const Timesheet = require('../models/Timesheet');
+
+// const router = express.Router();
+const router = express();
 
 router.get('/', async (req, res, next) => {
     try {
-        res.status(200).json({message: 'here are all the drivers'});
+        res.status(200).json({message: 'here is the time data'});
     }
-    catch (error){
+    catch (error) {
         next(error);
     }
 })
+
+
 
 router.use((err, req, res, next) => {
     res.status(err.status || 500).json({
