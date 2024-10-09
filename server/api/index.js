@@ -12,7 +12,7 @@ server.use('/api/drivers', driversRouter);
 server.use('/api/timesheet', timesheetRouter);
 
 server.get('/', (req, res) => {
-    res.status(300).json({ api: 'running on Vercel' });
+    res.status(200).json({ api: 'running on Vercel' });
 })
 
 server.use('*', (req, res) => {

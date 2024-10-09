@@ -5,7 +5,7 @@ const timesheetController = require('../controllers/timesheetController');
 
 const router = express();
 
-router.get('/', )
+// router.get('/', )
 
 // router.get('/', async (req, res, next) => {
 //     try {

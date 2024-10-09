@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const process = require('process'); // import the process module
 const basename = path.basename(__filename); // get the base name of the current file
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require(__dirname + '/../../data/config/config.json')[env];
 const db = {};
 
 
