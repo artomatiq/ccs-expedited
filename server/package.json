@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node api/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "npx sequelize-cli db:migrate --config data/config/config.json --migrations-path data/migrations",
     "seed": "npx sequelize-cli db:seed:all --config data/config/config.json --seeders-path data/seeders",
