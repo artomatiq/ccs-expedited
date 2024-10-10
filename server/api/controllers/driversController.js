@@ -23,6 +23,8 @@ const getAllDrivers = async (req, res, next) => {
 }
 //http GET :3007/api/drivers
 
+
+
 const getDriverById = async (req, res, next) => {
     try {
         const driver = await Driver.findByPk(req.params.id);
@@ -33,6 +35,20 @@ const getDriverById = async (req, res, next) => {
     }
 }
 //http GET :3007/api/drivers/6
+
+
+
+
+const updateDriver = async (req, res, next) => {
+    try {
+        
+    }
+    catch (err) {
+        next(err);
+    }
+}
+
+
 
 
 const deleteDriver = (req, res, next) => {
@@ -50,6 +66,8 @@ const deleteDriver = (req, res, next) => {
         .catch(next);
 }
 //http DELETE :3007/api/drivers/6
+
+
 
 module.exports = {
     createDriver,
