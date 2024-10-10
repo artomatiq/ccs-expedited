@@ -1,11 +1,9 @@
-require('dotenv').config();
-const PORT = process.env.PORT || 5000;
-
-const express = require('express');
-const server = express();
-
 const driversRouter = require('./routers/driversRouter');
 const timesheetRouter = require('./routers/timesheetRouter');
+
+const express = require('express');
+
+const server = express();
 
 server.use(express.json());
 
@@ -25,10 +23,6 @@ server.use((err, req, res, next) => {
         message: err.message,
         stack: err.stack
     })
-})
-
-server.listen(PORT, () => {
-    console.log(`server running on PORT ${PORT}`);
 })
 
 module.exports = server;

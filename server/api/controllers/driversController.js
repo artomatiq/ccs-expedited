@@ -10,8 +10,21 @@ const createDriver = async (req, res, next) => {
     }
 }
 
-const deleteDriver = (req, res) => {
-    
+const deleteDriver = (req, res, next) => {
+    Driver.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then (res => {
+            if (res) {
+                res.status(204).json({message: 'Driver deleted'});
+            }
+            else if (!res) {
+                res.status(404).json({message: 'Driver not found'});
+            }
+        })
+        .catch(next);
 }
 
 module.exports = {
