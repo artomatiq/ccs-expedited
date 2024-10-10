@@ -1,4 +1,5 @@
 const {Driver} = require('../models');
+const { get } = require('../routers/timesheetRouter');
 
 const createDriver = async (req, res, next) => {
     try {
@@ -11,15 +12,23 @@ const createDriver = async (req, res, next) => {
 }
 //http POST :3007/api/drivers name="Random" email="randy@gmail.com" phone="1111111111" hourly_rate="25"
 
+const getAllDrivers = async (req, res, next) => {
+    try {
+        const drivers = await Driver.findAll();
+        res.status(200).json(drivers);
+    }
+    catch (err) {
+        next(err)
+    }
+}
+//http GET :3007/api/drivers
+
 
 const deleteDriver = (req, res, next) => {
     Driver.destroy({
-        where: {
-            id: req.params.id
-        }
+        where: {id: req.params.id}
     })
         .then (rows => {
-            console.log(rows);
             if (rows) {
                 res.status(204).json({message: 'Driver deleted'});
             }
@@ -33,5 +42,6 @@ const deleteDriver = (req, res, next) => {
 
 module.exports = {
     createDriver,
-    deleteDriver
+    deleteDriver,
+    getAllDrivers,
 }
