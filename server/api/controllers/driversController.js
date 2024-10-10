@@ -9,6 +9,8 @@ const createDriver = async (req, res, next) => {
         next(error);
     }
 }
+//http POST :3007/api/drivers name="Random" email="randy@gmail.com" phone="1111111111" hourly_rate="25"
+
 
 const deleteDriver = (req, res, next) => {
     Driver.destroy({
@@ -16,17 +18,20 @@ const deleteDriver = (req, res, next) => {
             id: req.params.id
         }
     })
-        .then (res => {
-            if (res) {
+        .then (rows => {
+            console.log(rows);
+            if (rows) {
                 res.status(204).json({message: 'Driver deleted'});
             }
-            else if (!res) {
+            else if (!rows) {
                 res.status(404).json({message: 'Driver not found'});
             }
         })
         .catch(next);
 }
+//http DELETE :3007/api/drivers/6
 
 module.exports = {
-    createDriver
+    createDriver,
+    deleteDriver
 }
