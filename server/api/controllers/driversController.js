@@ -1,4 +1,4 @@
-const Driver = require('../models');
+const {Driver} = require('../models');
 
 const createDriver = async (req, res) => {
     try {
@@ -8,4 +8,8 @@ const createDriver = async (req, res) => {
     catch (error) {
         res.status(400).json({error: error.message})
     }
+}
+
+module.exports = {
+    createDriver
 }

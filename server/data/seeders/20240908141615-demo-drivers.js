@@ -21,7 +21,9 @@ module.exports = {
         email: 'johndoe@example.com',
         phone: '704-555-1234',
         hourly_rate: 20.00,
-        profile_picture: 'john_doe.jpg'
+        profile_picture: 'john_doe.jpg',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: 2,
@@ -29,7 +31,9 @@ module.exports = {
         email: 'georgesmith@example.com',
         phone: '704-555-5678',
         hourly_rate: 22.50,
-        profile_picture: 'george_smith.jpg'
+        profile_picture: 'george_smith.jpg',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: 3,
@@ -37,7 +41,9 @@ module.exports = {
         email: 'paulbrown@example.com',
         phone: '704-555-8765',
         hourly_rate: 19.75,
-        profile_picture: 'paul_brown.jpg'
+        profile_picture: 'paul_brown.jpg',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: 4,
@@ -45,7 +51,9 @@ module.exports = {
         email: 'roberttaylor@example.com',
         phone: '704-555-4321',
         hourly_rate: 22.50,
-        profile_picture: 'george_smith.jpg'
+        profile_picture: 'george_smith.jpg',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: 5,
@@ -53,7 +61,9 @@ module.exports = {
         email: 'danielwilson@example.com',
         phone: '704-555-9876',
         hourly_rate: 18.00,
-        profile_picture: 'daniel_wilson.jpg'
+        profile_picture: 'daniel_wilson.jpg',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ])
   },
