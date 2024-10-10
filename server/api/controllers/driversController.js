@@ -23,6 +23,17 @@ const getAllDrivers = async (req, res, next) => {
 }
 //http GET :3007/api/drivers
 
+const getDriverById = async (req, res, next) => {
+    try {
+        const driver = await Driver.findByPk(req.params.id);
+        res.status(200).json(driver);
+    }
+    catch (err){
+        next(err);
+    }
+}
+//http GET :3007/api/drivers/6
+
 
 const deleteDriver = (req, res, next) => {
     Driver.destroy({
@@ -42,6 +53,7 @@ const deleteDriver = (req, res, next) => {
 
 module.exports = {
     createDriver,
+    getDriverById,
     deleteDriver,
     getAllDrivers,
 }
