@@ -41,12 +41,21 @@ const getDriverById = async (req, res, next) => {
 
 const updateDriver = async (req, res, next) => {
     try {
-        
+        const [updated] = await Driver.update(req.body, {
+            where: {id: req.params.id}
+        })
+        if (updated) {
+            res.status(200).json({message: 'Driver updated'});
+        } 
+        else {
+            res.status(404).json({message: 'Driver not found'});
+        }
     }
     catch (err) {
         next(err);
     }
 }
+//http PUT :3007/api/drivers/8 name="Altered"
 
 
 
@@ -72,6 +81,7 @@ const deleteDriver = (req, res, next) => {
 module.exports = {
     createDriver,
     getDriverById,
+    updateDriver,
     deleteDriver,
     getAllDrivers,
 }
