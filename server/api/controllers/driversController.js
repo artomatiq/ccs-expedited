@@ -1,5 +1,6 @@
 const {Driver} = require('../models');
-const { get } = require('../routers/timesheetRouter');
+
+
 
 const createDriver = async (req, res, next) => {
     try {
@@ -11,6 +12,8 @@ const createDriver = async (req, res, next) => {
     }
 }
 //http POST :3007/api/drivers name="Random" email="randy@gmail.com" phone="1111111111" hourly_rate="25"
+
+
 
 const getAllDrivers = async (req, res, next) => {
     try {
@@ -38,7 +41,6 @@ const getDriverById = async (req, res, next) => {
 
 
 
-
 const updateDriver = async (req, res, next) => {
     try {
         const [updated] = await Driver.update(req.body, {
@@ -56,7 +58,6 @@ const updateDriver = async (req, res, next) => {
     }
 }
 //http PUT :3007/api/drivers/8 name="Altered"
-
 
 
 
