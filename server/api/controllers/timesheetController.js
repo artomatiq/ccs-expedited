@@ -1,13 +1,6 @@
 const {Timesheet} = require('../models');
 
-const findLogsByDate = async (req, res, next) => {
-    try {
 
-    }
-    catch {
-
-    }
-}
 
 const checkActiveStatus = async (driverId) => {
     try {
@@ -24,6 +17,8 @@ const checkActiveStatus = async (driverId) => {
         throw error;
     }
 }
+
+
 
 const createLog = async (req, res, next) => {
     try {
@@ -49,6 +44,49 @@ const createLog = async (req, res, next) => {
 
 
 
+const updateLog = async (req, res, next) => {
+    try {
+        const id = req.params.id;
+        const {action, time} = req.body;
+
+        //validate action
+        if (!['pause', 'resume', 'clockout'].includes(action)) {
+            res.status(400).json({message: 'Invalid action'});
+        }
+
+        //find the active log
+        const activeLog = await Timesheet.findOne({
+            where: {
+                driver_id: id,
+                clock_out: null
+            }
+        })
+
+        if (!activeLog) {
+            res.status(400).json({message: 'Driver is not clocked in'});
+        }
+
+        //update the log
+        if (action === 'pause') {
+            activeLog.clock_pause = time;
+        } else if (action === 'resume' && activeLog.clock_pause) {
+            activeLog.clock_resume = time;
+        } else {
+            activeLog.clock_out = time;
+        }
+        await activeLog.save()
+
+        res.status(200).json(activeLog)
+    }
+    catch (error) {
+        next(error);
+    }
+}
+//http PUT :3007/api/timesheet/1 action="pause" time="2024-10-18 19:11:11"
+
+
+
 module.exports = {
-    createLog
+    createLog,
+    updateLog
 }
