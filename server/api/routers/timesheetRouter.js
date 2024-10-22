@@ -4,7 +4,8 @@ const timesheetController = require('../controllers/timesheetController');
 const router = express();
 
 router.post('/:driverId', timesheetController.createLog);
-// router.get('/', timesheetController.getAllDrivers);
+router.get('/active', timesheetController.getAllActiveLogs);
+// router.get('/', timesheetController.getAllActiveLogs);
 // router.get('/:id', timesheetController.getDriverById);
 router.put('/:id', timesheetController.updateLog);
 // router.delete('/:id', timesheetController.deleteDriver);

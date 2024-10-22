@@ -86,7 +86,24 @@ const updateLog = async (req, res, next) => {
 
 
 
+const getAllActiveLogs = async (req, res, next) => {
+    try {
+        const activeLogs = await Timesheet.findAll({
+            where: {
+                clock_out: null
+            }
+        })
+        res.status(200).json(activeLogs);
+    }
+    catch (error) {
+        next(error)
+    }
+}
+//http GET :3007/api/timesheet/active
+
+
 module.exports = {
     createLog,
-    updateLog
+    updateLog,
+    getAllActiveLogs
 }
