@@ -5,8 +5,8 @@ const router = express();
 
 router.post('/:driverId', timesheetController.createLog);
 router.get('/active', timesheetController.getAllActiveLogs);
-// router.get('/', timesheetController.getAllActiveLogs);
-// router.get('/:id', timesheetController.getDriverById);
+//router.get('/', timesheetController.getAllLogsByPeriod);
+//router.get('/:id', timesheetController.getDriverLogsByPeriod);
 router.put('/:id', timesheetController.updateLog);
 // router.delete('/:id', timesheetController.deleteDriver);
 

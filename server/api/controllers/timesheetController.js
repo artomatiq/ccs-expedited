@@ -1,4 +1,5 @@
 const {Timesheet} = require('../models');
+const {Op} = require('sequelize');
 
 
 
@@ -100,6 +101,19 @@ const getAllActiveLogs = async (req, res, next) => {
     }
 }
 //http GET :3007/api/timesheet/active
+
+
+
+const getDriverLogsByPeriod = async (req, res, next) => {
+    try {
+        
+        const driverId = req.params.id;
+
+    }
+    catch (error) {
+        next(error)
+    }
+}
 
 
 module.exports = {
