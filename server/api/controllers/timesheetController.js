@@ -1,8 +1,6 @@
 const {Timesheet} = require('../models');
 const {Op} = require('sequelize');
 
-
-
 const checkActiveStatus = async (driverId) => {
     try {
         const activeLog = await Timesheet.findOne({

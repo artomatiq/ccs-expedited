@@ -1,6 +1,8 @@
 const express = require('express');
 const timesheetController = require('../controllers/timesheetController');
 
+const {authorizeAdmin, authorizeDriver} = require('../middleware/authMiddleware')
+
 const router = express();
 
 router.post('/:driverId', timesheetController.createLog);
