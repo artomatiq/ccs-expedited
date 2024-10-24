@@ -4,10 +4,12 @@ import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import MainContent from './components/main-content/MainContent';
-
+import Welcome from './components/welcome/Welcome';
+import { useAuth0 } from '@auth0/auth0-react';
 function App() {
 
   const [showSidebar, setShowSidebar] = useState(true);
+  const {isAuthenticated, isLoading} = useAuth0();
 
   function isSmartphone() {
     const userAgent = navigator.userAgent || window.opera;
@@ -30,7 +32,11 @@ useEffect(() => {
   if (isMobile) setShowSidebar(false);
 }, []);
 
-
+  // if (!isAuthenticated) {
+  //   return (
+  //     <Welcome/>
+  //   )
+  // }
 
   return (
     <div className='app-container'>
