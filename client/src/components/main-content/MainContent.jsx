@@ -22,7 +22,7 @@ function MainContent() {
             <Route path='/' element={<Navigate to={role === 'admin' ? '/admin' : '/driver'} replace/>}/>
 
             <Route 
-                path='admin' 
+                path='admin/*' 
                 element={
                 <ProtectedRoute role={role} expectedRole={'admin'}>
                     <Admin/>
@@ -31,7 +31,7 @@ function MainContent() {
             />
 
             <Route
-                path='driver'
+                path='driver/*'
                 element={
                     <ProtectedRoute role={role} expectedRole={'driver'}>
                         <Driver/>
