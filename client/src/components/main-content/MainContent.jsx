@@ -21,12 +21,18 @@ function MainContent() {
     // if (!isAuthenticated) {
     //     return <Navigate to='/welcome' replace/>;
     // }
-    const role = 'admin';
+    const role = null;
 
     return (
         <Routes>
 
-            <Route path='/' element={<Navigate to={role === 'admin' ? '/admin' : '/driver'} replace/>}/>
+            <Route path='/' element={<Navigate to={
+                role === 'admin' 
+                ? '/admin' 
+                : role === 'driver' 
+                ? '/driver' 
+                : '/welcome'
+            } replace/>}/>
 
             <Route 
                 path='admin/*' 
@@ -46,7 +52,7 @@ function MainContent() {
                 }
             />
 
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/welcome" replace />} />
 
         </Routes>
     );
