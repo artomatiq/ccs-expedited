@@ -14,7 +14,7 @@ const ProtectedRoute = ({role, expectedRole, children}) => {
 
 function MainContent() {
 
-    const role = 'driver';
+    const role = 'admin';
 
     return (
         <Routes>
