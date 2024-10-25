@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -9,62 +10,63 @@ import { useAuth0 } from '@auth0/auth0-react';
 function App() {
 
   const [showSidebar, setShowSidebar] = useState(true);
-  const {isAuthenticated, isLoading} = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
 
   function isSmartphone() {
     const userAgent = navigator.userAgent || window.opera;
     if (/android/i.test(userAgent)) {
-        return true;
+      return true;
     }
     if (/iPhone|iPod|iPad/i.test(userAgent)) {
-        return true;
+      return true;
     }
     if (/windows phone/i.test(userAgent)) {
-        return true;
-    }    
+      return true;
+    }
     return false;
-}
+  }
 
-// const isMobile = isSmartphone() ;
-const isMobile = isSmartphone();
+  // const isMobile = isSmartphone() ;
+  const isMobile = isSmartphone();
 
-useEffect(() => {
-  if (isMobile) setShowSidebar(false);
-}, []);
+  useEffect(() => {
+    if (isMobile) setShowSidebar(false);
+  }, [isMobile]);
 
-  // if (!isAuthenticated) {
-  //   return (
-  //     <Welcome/>
-  //   )
-  // }
+  if (!isAuthenticated) {
+    return (
+      <Routes>
+        <Route path='/*' element={<Welcome />} />
+      </Routes>
+    )
+  }
 
   return (
+
     <div className='app-container'>
-
-      {isMobile && <Sidebar 
-              showSidebar={showSidebar} 
-              setShowSidebar={setShowSidebar} 
-              className={showSidebar? 'show' : 'hide'}
-        />
+      {isMobile && <Sidebar
+        showSidebar={showSidebar}
+        setShowSidebar={setShowSidebar}
+        className={showSidebar ? 'show' : 'hide'}
+      />
       }
-
       <div className='top-row'>
-            {!isMobile && <Sidebar 
-              showSidebar={showSidebar} 
-              setShowSidebar={setShowSidebar} 
-              className={showSidebar? 'show' : 'hide'}
-            />}
+        {!isMobile && <Sidebar
+          showSidebar={showSidebar}
+          setShowSidebar={setShowSidebar}
+          className={showSidebar ? 'show' : 'hide'}
+        />}
         <div className='main-container'>
           <Header />
-          <MainContent/>
+          <MainContent />
         </div>
       </div>
 
       <div className='bottom-row'>
         <Footer />
       </div>
-
     </div>
+
   );
 }
 
