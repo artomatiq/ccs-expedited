@@ -34,7 +34,6 @@ root.render(
       <Auth0ProviderWrapper>
         <App />
       </Auth0ProviderWrapper>
-      <App />
     </React.StrictMode>
   </BrowserRouter>
 );
