@@ -31,7 +31,7 @@ function MainContent() {
                 ? '/admin' 
                 : role === 'driver' 
                 ? '/driver' 
-                : '/welcome'
+                : '/welcome' //if an authenticated user that's neither a driver nor an admin visits, redirect to welcome
             } replace/>}/>
 
             <Route 

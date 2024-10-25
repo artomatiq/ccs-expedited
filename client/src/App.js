@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -36,7 +36,8 @@ function App() {
   if (!isAuthenticated) {
     return (
       <Routes>
-        <Route path='/*' element={<Welcome />} />
+        <Route path='/*' element={<Navigate to="/welcome" replace />} />
+        <Route path='/welcome' element={<Welcome />} />
       </Routes>
     )
   }
