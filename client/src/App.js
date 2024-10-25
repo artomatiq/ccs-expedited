@@ -10,7 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 function App() {
 
   const [showSidebar, setShowSidebar] = useState(true);
-  const { isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   function isSmartphone() {
     const userAgent = navigator.userAgent || window.opera;
@@ -33,7 +33,10 @@ function App() {
     if (isMobile) setShowSidebar(false);
   }, [isMobile]);
 
+  console.log('this is the user', user);
+
   if (!isAuthenticated) {
+    console.log('user is not authenticated: App component');
     return (
       <Routes>
         <Route path='/*' element={<Navigate to="/welcome" replace />} />

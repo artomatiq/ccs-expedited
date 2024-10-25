@@ -21,6 +21,8 @@ function MainContent() {
     // if (!isAuthenticated) {
     //     return <Navigate to='/welcome' replace/>;
     // }
+
+    console.log('main content rendered');
     const role = null;
 
     return (

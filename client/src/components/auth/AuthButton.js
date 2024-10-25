@@ -11,7 +11,7 @@ function AuthButton() {
         </button>
     )
     : (
-        <button onClick={loginWithRedirect}>
+        <button id="logout-button" onClick={loginWithRedirect}>
             Login
         </button>
     )

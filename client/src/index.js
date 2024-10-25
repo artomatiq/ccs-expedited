@@ -1,39 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter, useNavigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-const Auth0ProviderWrapper = ({ children }) => {
-
-  const navigate = useNavigate();
-
-  const onRedirectCallback = (appState) => {
-    navigate(appState?.returnTo || '/');
-  };
-
-  return (
-    <Auth0Provider
-      domain='dev-gc0cdlhjk7beuxzr.us.auth0.com'
-      clientId='agRbFwLVzeMmQW2ZsuJWcvypttPz9kGe'
-      authorizationParams={{
-        redirect_uri: window.location.origin,
-      }}
-      onRedirectCallback={onRedirectCallback}
-    >
-      {children}
-    </Auth0Provider>
-  )
-}
+const onRedirectCallback = (appState) => {
+  window.history.replaceState({}, document.title, appState?.returnTo || '/');
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <BrowserRouter>
-    <React.StrictMode>
-      <Auth0ProviderWrapper>
+  <Auth0Provider
+    domain='dev-gc0cdlhjk7beuxzr.us.auth0.com'
+    clientId='agRbFwLVzeMmQW2ZsuJWcvypttPz9kGe'
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+    }}
+    onRedirectCallback={onRedirectCallback}
+  >
+    <BrowserRouter>
+      <React.StrictMode>
         <App />
-      </Auth0ProviderWrapper>
-    </React.StrictMode>
-  </BrowserRouter>
+      </React.StrictMode>
+    </BrowserRouter>
+  </Auth0Provider>
 );
