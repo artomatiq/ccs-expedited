@@ -15,6 +15,18 @@ function AuthButton() {
             Login
         </button>
     )
+
+    // return (
+    //     <div>
+    //         <button onClick={() => logout({ returnTo: window.location.origin })}>
+    //             Logout
+    //         </button>
+
+    //         <button id="logout-button" onClick={loginWithRedirect}>
+    //             Login
+    //         </button>
+    //     </div>
+    // )
 }
 
 export default AuthButton;

@@ -1,10 +1,11 @@
 import './AdminMenu.css';
 
 import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function AdminMenu() {
 
-
+    const { logout } = useAuth0();
 
     return (
         <ul className="admin menu-container">
@@ -43,13 +44,13 @@ function AdminMenu() {
                     <span className="menu-hover">Settings</span>
                 </li>
             </Link>
-            <Link to='logout' className='logout'>
+            <div to='logout' className='logout' onClick={() => logout({ returnTo: `${window.location.origin}/welcome` })}>
                 <li className="menu-item logout">
                     <i className='bx bx-log-out menu-icon' ></i>
                     <span className="menu-name">Logout</span>
                     <span className="menu-hover">Logout</span>
                 </li>
-            </Link>
+            </div>
         </ul>
     );
 }

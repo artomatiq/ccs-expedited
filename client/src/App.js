@@ -26,24 +26,27 @@ function App() {
     return false;
   }
 
-  // const isMobile = isSmartphone() ;
   const isMobile = isSmartphone();
 
   useEffect(() => {
     if (isMobile) setShowSidebar(false);
   }, [isMobile]);
 
-  console.log('this is the user', user);
+  if (isLoading) {
+    return <div>Loading...</div>; // Or a spinner to indicate loading state
+  }
 
   if (!isAuthenticated) {
-    console.log('user is not authenticated: App component');
+  //   console.log('not authetnicated in App');
     return (
       <Routes>
-        <Route path='/*' element={<Navigate to="/welcome" replace />} />
+        <Route path='/' element={<Navigate to="/welcome" replace />} />
         <Route path='/welcome' element={<Welcome />} />
       </Routes>
     )
   }
+
+  console.log('authenticated in App?', isAuthenticated);
 
   return (
 
@@ -70,7 +73,6 @@ function App() {
         <Footer />
       </div>
     </div>
-
   );
 }
 
