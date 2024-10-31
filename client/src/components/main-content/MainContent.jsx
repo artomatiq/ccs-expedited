@@ -15,6 +15,7 @@ function MainContent() {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     if (isLoading) {
+        console.log('loading in MainContent');
         return <div>Loading...</div>
     }
 
