@@ -20,6 +20,8 @@ root.render(
       redirect_uri: window.location.origin,
     }}
     onRedirectCallback={onRedirectCallback}
+    cacheLocation="localstorage" 
+    useRefreshTokens={true} 
   >
     <BrowserRouter>
       <React.StrictMode>

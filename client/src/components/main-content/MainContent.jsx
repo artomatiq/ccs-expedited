@@ -3,6 +3,7 @@ import Driver from '../driver/Driver';
 import Admin from '../admin/Admin';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useEffect, useState } from 'react';
 
 const ProtectedRoute = ({ role, expectedRole, children }) => {
     if (role !== expectedRole) {
@@ -12,17 +13,30 @@ const ProtectedRoute = ({ role, expectedRole, children }) => {
 }
 
 function MainContent() {
-    const { user, isAuthenticated, isLoading } = useAuth0();
-
-    if (isLoading) {
-        console.log('loading in MainContent');
-        return <div>Loading...</div>
-    }
+    const { user, isAuthenticated, getIdTokenClaims } = useAuth0();
 
     console.log('main content, authenticatd?', isAuthenticated);
     console.log('user', user);
 
-    let role = 'admin'
+    const [role, setRole] = useState();
+
+    useEffect(() => {
+        const fetchRole = async () => {
+            if (isAuthenticated) {
+                try {
+                    const claims = await getIdTokenClaims();
+                    const userRole = claims['https://myapp.example.com/roles'][0] || [];
+                    setRole(userRole);
+                    console.log('User role:', userRole);
+                } catch (error) {
+                    console.log('Error fetching role:', error);
+                }
+            }
+        }
+        fetchRole();
+    }, [getIdTokenClaims, isAuthenticated]);
+
+    console.log('the role state is', typeof role, role);
 
     return (
         <Routes>

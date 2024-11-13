@@ -10,7 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 function App() {
 
   const [showSidebar, setShowSidebar] = useState(true);
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
 
   function isSmartphone() {
     const userAgent = navigator.userAgent || window.opera;
@@ -32,22 +32,20 @@ function App() {
     if (isMobile) setShowSidebar(false);
   }, [isMobile]);
 
-  // if (isLoading) {
-  //   return <div>Loading...</div>; // Or a spinner to indicate loading state
-  // }
+  if (isLoading) {
+    return <div>Loading...</div>; // Or a spinner to indicate loading state
+  }
 
   if (!isAuthenticated) {
-    console.log('not authetnicated in App');
+    // console.log('not authetnicated in App');
     return (
       <Routes>
         <Route path='/' element={<Navigate to="/welcome" replace />} />
-        <Route path='/' element={<Welcome />} />
+        {/* <Route path='/' element={<Welcome />} /> */}
         <Route path='/welcome' element={<Welcome />} />
       </Routes>
     )
   }
-
-  console.log('authenticated in App?', isAuthenticated);
 
   return (
 
