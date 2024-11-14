@@ -4,8 +4,6 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-console.log('index.js before render');
-
 const onRedirectCallback = (appState) => {
   window.history.replaceState({}, document.title, appState?.returnTo || '/');
 };

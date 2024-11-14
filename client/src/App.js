@@ -8,8 +8,6 @@ import MainContent from './components/main-content/MainContent';
 import Welcome from './components/welcome/Welcome';
 import { useAuth0 } from '@auth0/auth0-react';
 
-console.log('App.js before render');
-
 function App() {
 
   console.log('App.js rendering');
@@ -38,7 +36,6 @@ function App() {
   }, [isMobile]);
 
   if (isLoading) {
-    console.log('App: auth state loading');
     return <div>Loading...</div>; // Or a spinner to indicate loading state
   }
 

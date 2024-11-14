@@ -41,7 +41,6 @@ function MainContent() {
     }, [getIdTokenClaims, isAuthenticated]);
 
     if (!role) {
-        console.log('MainContent: loading role');
         return <div>Loading role...</div>;
     }
 
