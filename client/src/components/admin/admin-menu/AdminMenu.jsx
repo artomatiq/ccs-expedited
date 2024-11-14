@@ -16,35 +16,35 @@ function AdminMenu() {
                     <span className="menu-hover">Dashboard</span>
                 </li>
             </Link>
-            <Link to='payroll'>
+            <Link to='/admin/payroll'>
                 <li className="menu-item">
                     <i className='bx bx-money-withdraw menu-icon'></i>
                     <span className="menu-name">Payroll</span>
                     <span className="menu-hover">Payroll</span>
                 </li>
             </Link>
-            <Link to='reports'>
+            <Link to='/admin/reports'>
                 <li className="menu-item">
                     <i className='bx bxs-report menu-icon'></i>
                     <span className="menu-name">Reports</span>
                     <span className="menu-hover">Reports</span>
                 </li>
             </Link>
-            <Link to='rates'>
+            <Link to='/admin/rates'>
                 <li className="menu-item">
                     <i className='bx bx-time-five menu-icon'></i>
                     <span className="menu-name">Rates</span>
                     <span className="menu-hover">Rates</span>
                 </li>
             </Link>
-            <Link to='settings'>
+            <Link to='/admin/settings'>
                 <li className="menu-item">
                     <i className='bx bxs-cog menu-icon' ></i>
                     <span className="menu-name">Settings</span>
                     <span className="menu-hover">Settings</span>
                 </li>
             </Link>
-            <div to='logout' className='logout' onClick={() => logout({ returnTo: `${window.location.origin}/welcome` })}>
+            <div to='/admin/logout' className='logout' onClick={() => logout({ returnTo: `${window.location.origin}/welcome` })}>
                 <li className="menu-item logout">
                     <i className='bx bx-log-out menu-icon' ></i>
                     <span className="menu-name">Logout</span>

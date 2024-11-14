@@ -7,6 +7,9 @@ import { useEffect, useState } from 'react';
 
 const ProtectedRoute = ({ role, expectedRole, children }) => {
     console.log('rendering protected route with role:', role);
+    // if (role === undefined) {
+    //     return <div>Loading...</div>;
+    // }
     if (role !== expectedRole) {
         return <Navigate to='/' />;
     }
