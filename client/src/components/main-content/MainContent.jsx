@@ -3,8 +3,7 @@ import Driver from '../driver/Driver';
 import Admin from '../admin/Admin';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useEffect, useState } from 'react';
-import { useRole } from '../auth/RoleContext'
+import { useRole } from '../context/RoleContext'
 
 const ProtectedRoute = ({ role, expectedRole, children }) => {
     console.log('rendering protected route with role:', role);

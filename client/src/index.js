@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
-import { RoleProvider } from './components/auth/RoleContext'
+import { RoleProvider } from './components/context/RoleContext'
 
 const onRedirectCallback = (appState) => {
   window.history.replaceState({}, document.title, appState?.returnTo || '/');
