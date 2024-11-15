@@ -3,6 +3,9 @@ import AdminLineGraph from '../admin-line-graph/AdminLineGraph';
 
 import DummyData from '../admin-line-graph/DummyData';
 
+import { useContext } from 'react';
+import { DriversContext } from '../../context/DriversContext';
+
 function AdminDashboard() {
 
     const payroll = 1327.40;
@@ -11,6 +14,9 @@ function AdminDashboard() {
         currency: 'USD',
     });
     const formattedPayroll = formatter.format(payroll);
+
+    const { drivers } = useContext(DriversContext);
+    // console.log(drivers)
 
     return (
         <div className="admin dash-container">
