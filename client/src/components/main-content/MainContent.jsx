@@ -4,6 +4,7 @@ import Admin from '../admin/Admin';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useEffect, useState } from 'react';
+import { useRole } from '../auth/RoleContext'
 
 const ProtectedRoute = ({ role, expectedRole, children }) => {
     console.log('rendering protected route with role:', role);
@@ -17,28 +18,11 @@ const ProtectedRoute = ({ role, expectedRole, children }) => {
 }
 
 function MainContent() {
-    const { user, isAuthenticated, getIdTokenClaims } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
 
     console.log('main content, authenticatd?', isAuthenticated);
 
-    const [role, setRole] = useState();
-
-    useEffect(() => {
-        const fetchRole = async () => {
-            if (isAuthenticated) {
-                try {
-                    const claims = await getIdTokenClaims();
-                    const userRole = claims['https://myapp.example.com/roles'][0] || [];
-                    setRole(userRole);
-                    console.log('main content: role:', userRole);
-                } catch (error) {
-                    console.log('Error fetching role:', error);
-                } finally {
-                }
-            }
-        }
-        fetchRole();
-    }, [getIdTokenClaims, isAuthenticated]);
+    const role = useRole();
 
     if (!role) {
         return <div>Loading role...</div>;

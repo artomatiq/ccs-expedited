@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { RoleProvider } from './components/auth/RoleContext'
 
 const onRedirectCallback = (appState) => {
   window.history.replaceState({}, document.title, appState?.returnTo || '/');
@@ -18,11 +19,13 @@ root.render(
       redirect_uri: window.location.origin,
     }}
     onRedirectCallback={onRedirectCallback}
-    cacheLocation="localstorage" 
-    useRefreshTokens={true} 
+    cacheLocation="localstorage"
+    useRefreshTokens={true}
   >
     <BrowserRouter>
+      <RoleProvider>
         <App />
+      </RoleProvider>
     </BrowserRouter>
   </Auth0Provider>
 );

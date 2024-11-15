@@ -2,10 +2,11 @@ import './Sidebar.css';
 import AdminMenu from '../admin/admin-menu/AdminMenu';
 import DriverMenu from '../driver/driver-menu/DriverMenu';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useRole } from '../auth/RoleContext.js'
 
 function Sidebar({ className, showSidebar, setShowSidebar }) {
 
-    const role = 'admin';
+    const role = useRole();
 
     const handleMenuClick = () => {
         setShowSidebar(!showSidebar);

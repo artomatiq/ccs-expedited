@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const RoleContext = createContext();
 
+//exporting the RoleProvider component
 export const RoleProvider = ({ children }) => {
     const { isAuthenticated, getIdTokenClaims } = useAuth0();
     const [role, setRole] = useState();
@@ -31,4 +32,5 @@ export const RoleProvider = ({ children }) => {
     )
 }
 
+//exporting the useRole hook
 export const useRole = () => useContext(RoleContext)
