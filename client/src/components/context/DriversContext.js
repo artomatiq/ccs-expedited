@@ -19,7 +19,7 @@ const fetchDrivers = async (setDrivers, setLoading, setError, isAuthenticated, r
     }
 };
 
-export const DriverProvider = ({ children }) => {
+export const DriversProvider = ({ children }) => {
     const [drivers, setDrivers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

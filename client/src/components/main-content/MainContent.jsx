@@ -4,6 +4,7 @@ import Admin from '../admin/Admin';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useRole } from '../context/RoleContext'
+import { DriversProvider } from '../context/DriversContext';
 
 const ProtectedRoute = ({ role, expectedRole, children }) => {
     console.log('rendering protected route with role:', role);
@@ -38,7 +39,9 @@ function MainContent() {
                 path='admin/*'
                 element={
                     <ProtectedRoute role={role} expectedRole={'admin'}>
-                        <Admin />
+                        <DriversProvider>
+                            <Admin />
+                        </DriversProvider>
                     </ProtectedRoute>
                 }
             />
